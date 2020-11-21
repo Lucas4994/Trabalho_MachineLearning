@@ -7,7 +7,7 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-@app.route("/", methodes = ['GET'])
+@app.route("/", methods = ['GET'])
 def hello():
     # fc = FirebaseController()
     # fc.FireStoreClient.collection('Voices').document('UserVoices').set({'message': 'hello world2'})
@@ -22,6 +22,6 @@ def newAutorizedVoice():
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 33507))
-    app.run(debug=True, port=port)
+    app.run(host='0.0.0.0', debug=True, port=port)
 
     
