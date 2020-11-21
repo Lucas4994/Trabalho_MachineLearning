@@ -22,8 +22,7 @@ def newAutorizedVoice():
 
 
 if __name__ == "__main__":
-    #controller = VoiceRecognizerController()
-    #controller.ExecuteTrain()
-    app.run(host='192.168.100.9',port=8000, debug=True)
+    port = int(os.environ.get('PORT', 33507))
+    app.run(debug=True, port=port)
 
     
