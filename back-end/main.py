@@ -7,7 +7,7 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-@app.route("/")
+@app.route("/", methodes = ['GET'])
 def hello():
     # fc = FirebaseController()
     # fc.FireStoreClient.collection('Voices').document('UserVoices').set({'message': 'hello world2'})
