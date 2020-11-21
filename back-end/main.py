@@ -9,10 +9,9 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route("/")
 def hello():
-    print('aqui filha da puta')
     # fc = FirebaseController()
     # fc.FireStoreClient.collection('Voices').document('UserVoices').set({'message': 'hello world2'})
-    return jsonify({"success": True}), 200
+    return jsonify({"messa": "Welcome to voice app!"}), 200
 
 @app.route('/new-voice', methods = ['POST'])
 def newAutorizedVoice():
